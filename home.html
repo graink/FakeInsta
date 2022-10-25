@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <nav>
+        <!-- link to login page-->
+        <button onclick="window.location.href='/login'">LOGIN</button>
+        <!--<button a href="/login">Please Login Here!</button>-->
+    </nav>
+</header>
+<h1>User List</h1>
+
+<table>
+    <tr><th>username</th>
+        <th>firstname</th>
+        <th>surname</th>
+        <th>password</th>
+    </tr>
+
+    <% for (var i in users) { %>
+    <tr>
+        <td> <%= users[i]["username"] %> </td>
+        <td> <%= users[i]["firstname"] %></td>
+        <td> <%= users[i]["surname"] %> </td>
+        <td> <%= users[i]["password"] %></td>
+    </tr>
+    <% } %>
+
+
+</table>
+
+
+</body>
+</html>
